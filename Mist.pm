@@ -458,7 +458,6 @@ sub radiusDisconnect {
         my $attributes_ref = {
             'Calling-Station-Id' => $mac,
             'NAS-IP-Address' => $send_disconnect_to,
-            'NAS-Port' => $node_info->{'last_port'},
         };
         # merging additional attributes provided by caller to the standard attributes
         $attributes_ref = { %$attributes_ref, %$add_attributes_ref };
